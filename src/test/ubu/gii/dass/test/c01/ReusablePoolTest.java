@@ -65,9 +65,9 @@ public class ReusablePoolTest {
 	public void testAcquireReusable() {
 		try {
 			for (int i = 0; i < 3; i++) {
-				vector.add(pool.acquireReusable());
-				assertTrue(vector.get(i) instanceof Reusable);
-				assertNotNull(vector.get(i)); 
+				cont.add(pool.acquireReusable());
+				assertTrue(cont.get(i) instanceof Reusable);
+				assertNotNull(cont.get(i)); 
 	
 			}
 		} catch (NotFreeInstanceException ex) {
