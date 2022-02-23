@@ -63,7 +63,17 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testAcquireReusable() {
-		fail("Not yet implemented");
+		try {
+			for (int i = 0; i < 3; i++) {
+				vector.add(pool.acquireReusable());
+				assertTrue(vector.get(i) instanceof Reusable);
+				assertNotNull(vector.get(i)); 
+	
+			}
+		} catch (NotFreeInstanceException ex) {
+			System.out.println("Ha sido imposible adquirir una instancia del objeto Reusable.");
+		}
+	}
 	}
 
 	/**
