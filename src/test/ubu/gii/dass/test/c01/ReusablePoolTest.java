@@ -10,8 +10,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * @author Daniel Meruelo Monzón
- * @author Yanela Lozano Pérez
+ * @author Daniel Meruelo Monzon
+ * @author Yanela Lozano Perez
  *
  */
 public class ReusablePoolTest {
