@@ -36,12 +36,14 @@ https://github.com/dmm1005/poolobject
 
 ¿Se ha realizado trabajo en equipo?
 Si, el trabajo se ha sido desarrolado por ambos miembros del equipo, solucionando los problemas anteriormente mencionados entre los dos.
+Podemos decir que, el trabajo ha sido desarrollado en un 50% por ambos.
 
 ¿Tiene calidad el conjunto de pruebas disponibles?
-Si.
+Si, y como observamos en la parte de arriba, podemos apreciar como sobre el total del proyecto supone un 65%.
 
 ¿Cuál es el esfuerzo invertido en realizar la actividad?
 Ante los problemas mencionados con anterioridad, ambos hemos invertido bastante mas tiempo que al codigo en si, sin embargo, la totalidad de la practica no ha sido excesivamente larga.
+Aproximadamente calculamos que, para la realización completa de la practica hemos empleado unas 4 horas, de las cuales mas de 40 minutos, es decir, aproximadamente el 17% del total de duracion nos ha llevado los problemillas de vinculacion que no esperabamos.
 
 ¿Cuál es el número de fallos encontrados en el código?
-No hemos detectado ninguno.
+No hemos detectado ninguno, es decir, 0% de fallos localizados.
