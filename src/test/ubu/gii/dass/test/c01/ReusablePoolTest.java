@@ -16,11 +16,15 @@ import org.junit.Test;
  */
 public class ReusablePoolTest {
 
+	private ReusablePool pool;
+	private Vector<Reusable> cont;
+
 	/**
 	 * @throws java.lang.Exception
 	 */
 	@Before
 	public void setUp() throws Exception {
+		pool = ReusablePool.getInstance();
 	}
 
 	/**
@@ -28,6 +32,9 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
+		for (Reusable c : cont) {
+			pool.releaseReusable(c);
+		}
 	}
 
 	/**
@@ -35,7 +42,13 @@ public class ReusablePoolTest {
 	 */
 	@Test
 	public void testGetInstance() {
-		fail("Not yet implemented");
+		ReusablePool instancia = ReusablePool.getInstance();
+		assertTrue(instancia instanceof ReusablePool);
+		assertTrue(pool instanceof ReusablePool);
+
+		assertTrue(
+				"No se cumple la condicion de unicidad que deberia proveer el patron Singleton, dado que hay mas de una instancia.",
+				(pool == instancia) && (pool.equals(instancia)));
 	}
 
 	/**
@@ -47,7 +60,8 @@ public class ReusablePoolTest {
 	}
 
 	/**
-	 * Test method for {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
+	 * Test method for
+	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
 	public void testReleaseReusable() {
