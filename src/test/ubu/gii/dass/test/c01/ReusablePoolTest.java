@@ -32,6 +32,7 @@ public class ReusablePoolTest {
 	@Before
 	public void setUp() throws Exception {
 		pool = ReusablePool.getInstance();
+		cont = new Vector<Reusable>();
 	}
 
 	/**
