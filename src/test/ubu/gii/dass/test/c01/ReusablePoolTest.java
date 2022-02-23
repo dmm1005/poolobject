@@ -32,6 +32,7 @@ public class ReusablePoolTest {
 	@Before
 	public void setUp() throws Exception {
 		pool = ReusablePool.getInstance();
+		cont = new Vector<Reusable>();
 	}
 
 	/**
@@ -39,8 +40,10 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
-		for (Reusable c : cont) {
-			pool.releaseReusable(c);
+		if (cont.size() != 0) {
+			for (Reusable c : cont) {
+				pool.releaseReusable(c);
+			}
 		}
 	}
 
@@ -67,22 +70,29 @@ public class ReusablePoolTest {
 			for (int i = 0; i < 3; i++) {
 				cont.add(pool.acquireReusable());
 				assertTrue(cont.get(i) instanceof Reusable);
-				assertNotNull(cont.get(i)); 
-	
+				assertNotNull(cont.get(i));
+
 			}
 		} catch (NotFreeInstanceException ex) {
 			System.out.println("Ha sido imposible adquirir una instancia del objeto Reusable.");
 		}
 	}
-	
 
 	/**
 	 * Test method for
 	 * {@link ubu.gii.dass.c01.ReusablePool#releaseReusable(ubu.gii.dass.c01.Reusable)}.
 	 */
 	@Test
-	public void testReleaseReusable() {
-		fail("Not yet implemented");
+	public void testReleaseReusable() throws NotFreeInstanceException, DuplicatedInstanceException {
+		Reusable r1 = pool.acquireReusable();
+		Reusable r2 = pool.acquireReusable();
+
+		try {
+			pool.releaseReusable(r1);
+			pool.releaseReusable(r2);
+		} catch (DuplicatedInstanceException ex) {
+			System.out.println("Error, instancia duplicada.\n");
+		}
 	}
 
 }
