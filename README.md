@@ -1,9 +1,9 @@
-poolobject
+Poolobject
 ==========
 
-Java code example of  design creational pattern pool object
+[![Build Status](https://www.travis-ci.com/dmm1005/poolobject.svg?branch=master)](https://www.travis-ci.com/dmm1005/poolobject)
 
-Example to apply good practise in software developmemnt: test and mesurement.
+[![codecov](https://codecov.io/gh/dmm1005/poolobject/branch/master/graph/badge.svg?token=0CNGOV3UUL)](https://codecov.io/gh/dmm10005/poolobject)
 
 
 ## **Autores**
@@ -36,9 +36,12 @@ https://github.com/dmm1005/poolobject
 
 ¿Se ha realizado trabajo en equipo?
 Si, el trabajo se ha sido desarrolado por ambos miembros del equipo, solucionando los problemas anteriormente mencionados entre los dos.
+
 ¿Tiene calidad el conjunto de pruebas disponibles?
-Si
+Si.
+
 ¿Cuál es el esfuerzo invertido en realizar la actividad?
 Ante los problemas mencionados con anterioridad, ambos hemos invertido bastante mas tiempo que al codigo en si, sin embargo, la totalidad de la practica no ha sido excesivamente larga.
+
 ¿Cuál es el número de fallos encontrados en el código?
-No hemos detectado ninguno
+No hemos detectado ninguno.
