@@ -39,8 +39,10 @@ public class ReusablePoolTest {
 	 */
 	@After
 	public void tearDown() throws Exception {
-		for (Reusable c : cont) {
-			pool.releaseReusable(c);
+		if (cont.size() != 0) {
+			for (Reusable c : cont) {
+				pool.releaseReusable(c);
+			}
 		}
 	}
 
