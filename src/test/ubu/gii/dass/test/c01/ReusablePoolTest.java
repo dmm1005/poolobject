@@ -74,7 +74,7 @@ public class ReusablePoolTest {
 			System.out.println("Ha sido imposible adquirir una instancia del objeto Reusable.");
 		}
 	}
-	}
+	
 
 	/**
 	 * Test method for
