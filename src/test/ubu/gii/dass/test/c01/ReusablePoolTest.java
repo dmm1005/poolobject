@@ -14,6 +14,8 @@ import ubu.gii.dass.c01.NotFreeInstanceException;
 import ubu.gii.dass.c01.Reusable;
 import ubu.gii.dass.c01.ReusablePool;
 
+import java.util.Vector;
+
 /**
  * @author Daniel Meruelo Monzon
  * @author Yanela Lozano Perez
